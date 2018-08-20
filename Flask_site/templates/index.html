@@ -18,20 +18,19 @@
             border: 0px solid red
         }
     </style>
-    <div class="container">
+
     <div class="jumbotron" style="text-align: center;">
-        <h1 class="display-4"><a href="/">Mission to Mars</a></h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or
-            information.
-        </p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <h1 class="display-4">
+            Mission to Mars
+        </h1>
+
         <p class="lead">
+            <a class="btn btn-primary btn-lg" href="/hemispheres/" role="button">Hemispheres</a>
             <a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape</a>
         </p>
     </div>
 
-   
+
     <div class="row">
         <div class="col-sm-8">
             <h1>Latetest Mars News</h1>
@@ -39,7 +38,7 @@
             <p>{{data['description']}}
             </p>
             <div class="text-center">
-                <img src={{data['image']}} class="img-thumbnail mx-auto float-middle" alt="great stuff">
+                <img src={{data[ 'image']}} class="img-thumbnail mx-auto float-middle" alt="great stuff">
             </div>
 
         </div>
@@ -48,14 +47,11 @@
             {{data['weather']['text']}}
             <div class="col-sm">
                 <h1>Mars Facts</h1>
-               {{ data['table']|safe}}
+                {{ data['table']|safe}}
             </div>
         </div>
     </div>
-</div>
 
-    a.strip('\"')
-    <!-- end main container -->
 
 
 

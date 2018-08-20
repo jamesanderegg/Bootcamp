@@ -79,6 +79,42 @@ def get_mars_table():
 
     return table_html
 
+def get_hemisphere_data():
+    title_list = []
+
+    data_dict = {}
+
+    url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
+
+    driver = instantiate_driver()
+    
+    driver.get(url)
+    html = driver.page_source
+    soup = BeautifulSoup(html, 'html.parser')
+    driver.close()
+    
+    for item in soup.findAll('div',{'class':'description'}):
+        title_list.append(item.h3.text)
+    
+    for title in title_list:
+    
+        driver = instantiate_driver()
+        driver.get(url)
+        time.sleep(1)
+        driver.find_element_by_link_text(title).click()
+        time.sleep(1)
+        sample = driver.find_element_by_link_text('Sample')
+        time.sleep(1)
+        data_dict[title] = sample.get_attribute('href')
+        
+        driver.close()
+
+    
+    
+        
+        
+    return data_dict, title_list
+
 def manage_data(data_dict):
 
     client = MongoClient('localhost',27017)
@@ -99,7 +135,8 @@ def scraaaaape():
     print("Weather")
     data_dict['table'] = get_mars_table()
     print("Table")
-
+    data_dict['hemi']= get_hemisphere_data()
+    print("Hemispheres")
     manage_data(data_dict)
 
     return data_dict
