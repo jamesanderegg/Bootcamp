@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  font-family: Ubuntu, sans-serif;
+}
+
+html,
+body {
+  background: url("../images/nasa.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  padding: 0pt;
+  margin: 0;
+}
+
+/* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 130px;
+  overflow: auto;
+}
+
+/* The footer is positioned at the bottom of the page */
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 80px;
+  background: #4e5d6c;
+}
+
+/* The code styles the text at the bottom of the footer */
+.footer > .bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+  background: #414141;
+}
+
+/*top nav bar*/
+.navbar {
+  padding: 5px;
+  margin: 0;
+}
+
+/* This CSS styles the ufo icon in the navbar */
+.nav-ufo {
+  position: absolute;
+  bottom: 5px;
+  left: 150px;
+  width: 35px;
+  color: white;
+}
+
+/* Adding styles to the aside and filter form */
+
+.filters .panel-body {
+  padding: 0px;
+}
+
+.filters {
+  margin-top: 10px;
+}
+
+
+

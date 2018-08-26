@@ -1,0 +1,49 @@
+// from data.js
+var tableData = data;
+
+// YOUR CODE HERE!
+
+//Select the button
+var filterButton = d3.select("#filter-btn");
+
+filterButton.on("click", function () {
+
+    d3.event.preventDefault();
+
+    //Select the input element ang get the raw HTML node
+    var inputElement = d3.select("#datetime");
+
+    //Get the value property of the input element
+    var inputValue = inputElement.property("value");
+
+    //Test in console
+    console.log(inputValue);
+
+    var filteredData = tableData.filter(tableData => tableData.datetime === inputValue);
+
+    console.log(filteredData);
+
+    var table_body = d3.select("tbody");
+    table_body.attr("class", "table table-striped")
+    filteredData.forEach(x => {
+        let tb = table_body.append('tr')
+        console.log(x)
+        Object.entries(x).forEach(([key, value]) => {
+            console.log(key, value)
+            tb.append('td').text(value)
+        })
+    });
+});
+
+  // need to add 1 tr for each observation in data
+  // for each tr, there's a td for each column in the data
+  // we have 4 columns
+
+
+
+
+
+//COLLECT DATA FOR ALL COLUMNS:
+//CHECK FORMATING OF EACH INPUT.
+//SHAPES COULB BE A GOOFY IMAGES
+//

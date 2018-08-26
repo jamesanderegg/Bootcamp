@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>UFO Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">UFO Sightings
+            <img class="nav-ufo" src="static/images/ufo.svg">
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row" style="background-color: rgba(100, 90, 100, 0.6); 
+        margin:50pt; min-height: 43pc; color:white; padding-left: 20px;">
+        <h2>Filterable Table</h2>
+        <p>Search dates or any text you're looking for in the input box. Please use lowercase letters.</p>  
+        <input class="form-control" style="width: 500px; margin-left: 20px;" id="myInput" type="text" placeholder="1/11/2011">
+        <br>
+        <button id="filter-btn" type="submit" class="btn btn-default" style="margin-left: 25px; margin-bottom: 10px;">Filter Table</button>
+        <table class="table table-bordered table-hover" style="margin-left: 10px; width: 99%; color:whitesmoke">
+          <thead>
+            <tr>
+              <th class="table-head">Date</th>
+              <th class="table-head">City</th>
+              <th class="table-head">State</th>
+              <th class="table-head">Country</th>
+              <th class="table-head">Shape</th>
+              <th class="table-head">Duration</th>
+              <th class="table-head">Comments</th>
+            </tr>
+          </thead>
+          <tbody style="background-color:rgba(6, 38, 59, 0.5);"></tbody>
+        
+
+
+      </div>
+      <footer class="footer">
+        <span class="bottom">UFO Sightings</span>
+      </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="static/js/data.js"></script>
+    <script src="static/js/app.js"></script>
+</body>
+
+</html>
