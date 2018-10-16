@@ -1,0 +1,16 @@
+/* remove default margin and padding from body */
+body {
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* set a top margin for signature line */
+#map {position:absolute; top:9%; bottom:0; width:100%;}
+
+
+.legend {
+    text-align: left;
+    line-height: 18px;
+    opacity: 1;
+    
+  }
